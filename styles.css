@@ -1,0 +1,17 @@
+.personal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    margin-left: 40px;
+    width: 51%;
+}
+
+img {
+    width: 45%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: top;
+}
