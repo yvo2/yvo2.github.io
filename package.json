@@ -1,0 +1,24 @@
+{
+  "name": "yvo2.github.io",
+  "version": "1.0.0",
+  "description": "my personal website, covering my activities in business and politics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvo2/yvohofer.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yvo2/yvohofer.github.io/issues"
+  },
+  "homepage": "https://github.com/yvo2/yvohofer.github.io#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
