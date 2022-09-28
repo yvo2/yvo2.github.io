@@ -9,38 +9,12 @@ h2 {
     text-align: left;
 }
 
-.lead {
-    font-size: 1.15em;
-}
-
 a {
     color: black;
 }
 
-button {
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.clearFix {
-    clear: both;
-}
-
-.container {
-    width: 70%;
-    max-width: 1600px;
-    margin: 120px auto 50px;
-}
-
-.tripleLayout {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
 img, div, a {
-    width: 30%;
+    width: 50%;
     display: block;
 }
 
@@ -55,7 +29,7 @@ img, div, a {
 }
 
 img {
-    width: 45%;
+    width: 50%;
     height: auto;
     display: block;
     object-fit: contain;
