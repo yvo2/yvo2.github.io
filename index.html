@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Yvo Hofer</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="module" src="scripts/app.js"></script>
 </head>
 <body>
 
@@ -12,6 +12,17 @@
 <p>
     Engagement in Business, Politik und Weiterbildung.
 </p>
+<div id="blob">
+    <svg viewBox="0 0 200 200">
+        <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+                <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)"/>
+                <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)"/>
+            </linearGradient>
+        </defs>
+        <path d="" fill="url('#gradient')"></path>
+    </svg>
+</div>
 <div className="personal">
     <img src="img/YvoHofer_Portrait.jpg" alt="Yvo Hofer Portrait"/>
     <div className="content">
