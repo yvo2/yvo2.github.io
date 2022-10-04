@@ -41,7 +41,7 @@ const points = createPoints();
 
     root.style.setProperty("--startColor", `hsl(${hue}, 100%, 75%)`);
     root.style.setProperty("--stopColor", `hsl(${hue + 60}, 100%, 75%)`);
-    document.body.style.background = `hsl(${hue + 60}, 75%, 5%)`;
+    document.getElementById("blob").style.background = `hsl(${hue + 60}, 75%, 5%)`;
 
     hueNoiseOffset += noiseStep / 6;
 
@@ -95,3 +95,23 @@ document.querySelector("path").addEventListener("mouseover", () => {
 document.querySelector("path").addEventListener("mouseleave", () => {
     noiseStep = 0.005;
 });
+
+const cursor = document.querySelector("#cursor");
+
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+});
+
+document.addEventListener("mouseup", () => cursor.classList.add("pulse"));
+document.addEventListener("animationend", () =>
+    cursor.classList.remove("pulse")
+);
+document.addEventListener(
+    "mouseleave",
+    () => (cursor.style.visibility = "hidden")
+);
+document.addEventListener(
+    "mouseenter",
+    () => (cursor.style.visibility = "visible")
+);
