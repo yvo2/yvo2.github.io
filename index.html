@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>Yvo Hofer</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="scripts/app.js"></script>
 </head>
 <body>
-<div id="sdc"><a href="#section07"><span></span>Scroll</a></div>
 <div class="cursor" id="cursor">
     <div class="circle" id="circle"></div>
 </div>
 <div id="intro">
-    <h1>Yvo Hofer</h1>
-    <p>Engagement in Business, Politik und Weiterbildung.</p>
+    <section id="scroll" class="description">
+        <h1>Yvo Hofer</h1>
+        <p>Engagement in Business, Politik und Weiterbildung</p>
+        <a href="#blob"><span>
+        </span>Scroll</a>
+    </section>
 </div>
 <div id="blob">
     <svg viewBox="0 0 200 200">
@@ -26,9 +30,9 @@
         <path d="" fill="url('#gradient')"></path>
     </svg>
 </div>
-<div className="personal">
+<div class="personal">
     <img src="img/YvoHofer_Portrait.jpg" alt="Yvo Hofer Portrait"/>
-    <div className="content">
+    <div class="content">
         <h2>Beruflich</h2>
         <p>
             <strong>seit 2020:</strong> Studium der Wirtschaftsinformatik, BFH<br/>

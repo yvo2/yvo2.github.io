@@ -1,4 +1,4 @@
-import { spline } from "https://cdn.skypack.dev/@georgedoescode/spline@1.0.1";
+import {spline} from "https://cdn.skypack.dev/@georgedoescode/spline@1.0.1";
 import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@2.4.0";
 
 // our <path> element
@@ -120,9 +120,9 @@ document.addEventListener(
 
 // mouse scroll
 
-$(function() {
-    $('a[href*=#]').on('click', function(e) {
+$(function () {
+    $('a[href*="#blob"]').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
     });
 });
