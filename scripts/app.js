@@ -88,6 +88,8 @@ function createPoints() {
     return points;
 }
 
+// curser
+
 document.querySelector("path").addEventListener("mouseover", () => {
     noiseStep = 0.01;
 });
@@ -115,3 +117,12 @@ document.addEventListener(
     "mouseenter",
     () => (cursor.style.visibility = "visible")
 );
+
+// mouse scroll
+
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+});
