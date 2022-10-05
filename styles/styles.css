@@ -62,14 +62,14 @@ img {
 }
 
 #blob {
-    height: 100vh;
+    height: 50vh;
     display: grid;
     place-items: center;
 }
 
 svg {
-    width: 90vmin;
-    height: 90vmin;
+    width: 45vmin;
+    height: 45vmin;
 }
 
 /* special cursor */
@@ -141,20 +141,20 @@ section::after {
 
 section h1 {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     z-index: 2;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    font-size: 12vh;
+    font-size: 14vh;
     white-space: nowrap;
 }
 
 section p {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     z-index: 2;
     -webkit-transform: translate(-50%, -50%);
@@ -163,6 +163,7 @@ section p {
     text-align: center;
     font-size: 4vh;
     white-space: nowrap;
+    font-family: Raleway;
 }
 
 .description a {
