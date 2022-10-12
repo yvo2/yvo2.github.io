@@ -121,7 +121,7 @@ document.addEventListener(
 // mouse scroll
 
 $(function () {
-    $('a[href*="#blob"]').on('click', function (e) {
+    $('a[href*="#business"]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
     });

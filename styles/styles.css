@@ -13,7 +13,6 @@
 body {
     line-height: 1.3;
     padding-bottom: 0;
-    background-image: url("../img/night.jpeg");
     font-family: Lato;
 }
 
@@ -22,17 +21,19 @@ a {
 }
 
 #intro {
-    opacity: 0.8;
     background-color: black;
     width: 100%;
     height: 100vh;
-    text-align: center;
     color: white;
+    background-image: url("../img/night.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
 }
 
-.personal {
-    display: flex;
-    justify-content: space-between;
+#business {
+    width: 100%;
+    height: 100vh;
 }
 
 .content {
@@ -46,6 +47,43 @@ img {
     display: block;
     object-fit: contain;
     object-position: top;
+}
+
+.horizontal-nav a {
+    display: block;
+    line-height: 25px;
+    position: relative;
+    padding-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.horizontal-nav a:hover {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.horizontal-nav .nav-horizontal {
+    display: block;
+    width: auto;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.horizontal-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-nav li {
+    width: auto;
+    list-style: none;
+    display: inline-block;
 }
 
 /* colorful blob design element */
@@ -134,7 +172,6 @@ section::after {
     left: 0;
     content: '';
     width: 100%;
-    height: 80%;
     background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
     background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
 }
