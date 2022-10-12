@@ -121,6 +121,13 @@ document.addEventListener(
 // mouse scroll
 
 $(function () {
+    $('a[href*="#intro"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+});
+
+$(function () {
     $('a[href*="#business"]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');

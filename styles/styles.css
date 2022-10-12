@@ -49,6 +49,19 @@ img {
     object-position: top;
 }
 
+/* navigation bar */
+
+ul.horizontal-nav {
+    position: fixed;
+    left: 5vh;
+    top: 5vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+}
+
 .horizontal-nav a {
     display: block;
     line-height: 25px;
