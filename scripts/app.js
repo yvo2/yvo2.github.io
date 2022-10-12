@@ -133,3 +133,30 @@ $(function () {
         $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
     });
 });
+
+// image api import
+
+async function load_pic() {
+
+    const url = 'https://ranmoji.herokuapp.com/emojis/api/v.1.0/'
+
+    const options = {
+        method: "GET"
+    }
+
+    let response = await fetch(url, options)
+
+    if (response.status === 200) {
+
+        const result = await response.json();
+        const emoji = result.emoji;
+
+        const container = document.getElementById("random");
+        container.innerHTML = emoji;
+    }
+    else {
+        console.log("HTTP-Error: " + response.status)
+    }
+}
+
+load_pic();
