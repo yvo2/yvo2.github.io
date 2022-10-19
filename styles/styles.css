@@ -16,6 +16,12 @@ body {
     font-family: Lato;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
 a {
     color: black;
 }
@@ -34,7 +40,7 @@ a {
 #random {
     font-size: 2vh;
     position: absolute;
-    top: 5vh;
+    top: 4vh;
     right: 5vh;
 }
 
@@ -109,37 +115,17 @@ ul.horizontal-nav {
 
 /* colorful blob design element */
 
-#blob:root {
-    --startColor: hsl(0, 100%, 75%);
-    --stopColor: hsl(0, 100%, 75%);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 #blob {
-    height: 50vh;
     display: grid;
     place-items: center;
 }
 
 svg {
-    width: 45vmin;
-    height: 45vmin;
+    width: 10vh;
+    height: 10vh;
 }
 
 /* special cursor */
-
-path {
-    cursor: pointer;
-}
-
-* {
-    cursor: none;
-}
 
 .cursor {
     visibility: hidden;
