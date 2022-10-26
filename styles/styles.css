@@ -22,18 +22,24 @@ body {
     cursor: none;
 }
 
+@media screen and (max-width: 992px) {
+    * {
+        cursor: auto;
+    }
+}
+
 a {
     color: black;
 }
 
 #intro {
     background-color: black;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: white;
     background-image: url("../img/night.jpeg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100vw;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
 }
 
@@ -44,14 +50,26 @@ a {
     right: 5vh;
 }
 
-#business {
-    width: 100%;
+@media screen and (max-width: 992px) {
+    #random {
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #random {
+        font-size: 4vh;
+    }
+}
+
+#business, #education, #politics {
+    width: 100vw;
     height: 100vh;
 }
 
 .content {
-    margin-left: 40px;
-    width: 51%;
+    margin-left: 12vw;
+    width: 100vw;
 }
 
 img {
@@ -127,41 +145,43 @@ svg {
 
 /* special cursor */
 
-.cursor {
-    visibility: hidden;
-    position: absolute;
-    margin-top: calc(10px / -2);
-    margin-left: calc(10px / -2);
-    width: 10px;
-    height: 10px;
-    z-index: 1;
+@media screen and (min-width: 992px) {
+    .cursor {
+        visibility: hidden;
+        position: absolute;
+        margin-top: calc(10px / -2);
+        margin-left: calc(10px / -2);
+        width: 10px;
+        height: 10px;
+        z-index: 1;
 
-    /* would still like to be able to click things */
-    pointer-events: none;
-}
-
-.circle {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-}
-
-.pulse {
-    border-radius: 50%;
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
-    animation: pulse 1.2s 1;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+        /* would still like to be able to click things */
+        pointer-events: none;
     }
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
     }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+
+    .pulse {
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
+        animation: pulse 1.2s 1;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
     }
 }
 

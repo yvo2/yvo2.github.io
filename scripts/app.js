@@ -47,8 +47,6 @@ const points = createPoints();
     requestAnimationFrame(animate);
 })();
 
-// cursor
-
 function map(n, start1, end1, start2, end2) {
     return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
 }
@@ -97,43 +95,69 @@ document.querySelector("path").addEventListener("mouseleave", () => {
     noiseStep = 0.005;
 });
 
-const cursor = document.querySelector("#cursor");
+// cursor
 
-document.addEventListener("mousemove", e => {
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-});
+if ($(window).width() > 992) {
+    const cursor = document.querySelector("#cursor");
 
-document.addEventListener("mouseup", () => cursor.classList.add("pulse"));
-document.addEventListener("animationend", () =>
-    cursor.classList.remove("pulse")
-);
-document.addEventListener(
-    "mouseleave",
-    () => (cursor.style.visibility = "hidden")
-);
-document.addEventListener(
-    "mouseenter",
-    () => (cursor.style.visibility = "visible")
-);
+    document.addEventListener("mousemove", e => {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+    });
+
+    document.addEventListener("mouseup", () => cursor.classList.add("pulse"));
+    document.addEventListener("animationend", () =>
+        cursor.classList.remove("pulse")
+    );
+    document.addEventListener(
+        "mouseleave",
+        () => (cursor.style.visibility = "hidden")
+    );
+    document.addEventListener(
+        "mouseenter",
+        () => (cursor.style.visibility = "visible")
+    );
+}
 
 // mouse scroll
 
 $(function () {
     $('a[href*="#intro"]').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top},
+            500,
+            'linear');
     });
 });
 
 $(function () {
     $('a[href*="#business"]').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top},
+            500,
+            'linear');
     });
 });
 
-// image api import
+$(function () {
+    $('a[href*="#education"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top},
+            500,
+            'linear');
+    });
+});
+
+$(function () {
+    $('a[href*="#politics"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top},
+            500,
+            'linear');
+    });
+});
+
+// emoji api import
 
 async function load_pic() {
 
@@ -152,8 +176,7 @@ async function load_pic() {
 
         const container = document.getElementById("random");
         container.innerHTML = emoji;
-    }
-    else {
+    } else {
         console.log("HTTP-Error: " + response.status)
     }
 }
