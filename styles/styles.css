@@ -65,19 +65,15 @@ a {
 #business, #education, #politics {
     width: 100vw;
     height: 100vh;
+    display: grid;
 }
 
-.content {
+.details {
     margin-left: 12vw;
-    width: 100vw;
 }
 
 img {
     width: 50%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    object-position: top;
 }
 
 /* navigation bar */
