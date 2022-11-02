@@ -86,6 +86,7 @@ ul.horizontal-nav {
     font-size: 2vh;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
     transform: translateY(-50%);
     text-align: center;
     z-index: 2;
@@ -119,27 +120,30 @@ ul.horizontal-nav {
     display: inline-block;
 }
 
-#burger {
+#mobile {
     display: none;
-    position: absolute;
+}
+
+#toggle {
+    display: block;
+    position: fixed;
+    z-index: 1000;
     left: 5vh;
     top: 5vh;
 }
 
-#burger input {
+#toggle input {
     display: block;
     width: 40px;
     height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
+    position: fixed;
     cursor: pointer;
     opacity: 0;
     z-index: 2;
     -webkit-touch-callout: none;
 }
 
-#burger span {
+#toggle span {
     display: block;
     width: 33px;
     height: 4px;
@@ -154,30 +158,30 @@ ul.horizontal-nav {
     opacity 0.55s ease;
 }
 
-#burger span:first-child {
+#toggle span:first-child {
     transform-origin: 0 0;
 }
 
-#burger span:nth-last-child(2) {
+#toggle span:nth-last-child(2) {
     transform-origin: 0 100%;
 }
 
-#burger input:checked ~ span {
+#toggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: white;
 }
 
-#burger input:checked ~ span:nth-last-child(3) {
+#toggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#burger input:checked ~ span:nth-last-child(2) {
+#toggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-#burger input:checked ~ ul {
+#toggle input:checked ~ ul {
     transform: none;
 }
 
@@ -194,11 +198,14 @@ ul.horizontal-nav {
 }
 
 @media screen and (max-width: 600px) {
-    ul.horizontal-nav {
+    .horizontal-nav {
         display: none;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
-    #burger {
+    #mobile {
         display: block;
     }
 }
