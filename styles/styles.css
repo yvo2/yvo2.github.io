@@ -86,14 +86,40 @@ a {
     overflow: hidden;
 }
 
-#business > * {
-    border: 1px solid;
-    padding: 1rem;
-    min-width: 0px;
-}
-
 #business img {
     width: 100%;
+}
+
+#business p {
+    margin-bottom: 20px;
+}
+
+#education {
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-gap: 15px;
+}
+
+#education img {
+    width: 100%;
+}
+
+#education p {
+    margin-bottom: 20px;
+}
+
+#politics {
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-gap: 15px;
+}
+
+#politics img {
+    width: 100%;
+}
+
+#politics p {
+    margin-bottom: 20px;
 }
 
 /* navigation bar */
