@@ -65,7 +65,7 @@ a {
     }
 }
 
-#business, #education, #politics {
+#business, #education, #contact {
     width: 100vw;
     height: 100vh;
     padding: 10vh 5vh 0;
@@ -112,6 +112,22 @@ a {
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 50% 25%;
     grid-gap: 15px;
+}
+
+#contact input[type=checkbox] {
+    display: none;
+}
+
+#contact input, textarea {
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contact textarea {
+    resize: vertical;
 }
 
 /* navigation bar */

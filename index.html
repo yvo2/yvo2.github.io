@@ -20,7 +20,7 @@
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#business">Business</a></li>
                 <li><a href="#education">Bildung</a></li>
-                <li><a href="#politics">Politik</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
             <div id="mobile">
                 <input type="checkbox"/>
@@ -80,9 +80,19 @@
     </div>
 </div>
 <div id="contact">
-    <div class="details">
-        <h2>Kontakt</h2>
-    </div>
+    <h2>Kontakt</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="">
+        <input type="hidden" name="subject" value="new submission from yvo2.github.io">
+        <input type="hidden" name="from_name" value="yvo2.github.io">
+        <input type="checkbox" name="botcheck" class="hidden">
+        <input type="email" placeholder="E-Mail" name="email" required>
+        <input type="text" placeholder="Vorname" name="First Name" required>
+        <input type="text" placeholder="Nachname" name="Last Name" required>
+        <input type="text" placeholder="Telefonnummer" name="Phone Number" required>
+        <textarea placeholder="Nachricht ..." name="message" required></textarea>
+        <button type="submit">Abschicken</button>
+    </form>
 </div>
 </body>
 </html>

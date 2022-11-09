@@ -1,7 +1,7 @@
 {
   "name": "yvo2.github.io",
   "version": "1.0.0",
-  "description": "my personal website, covering my activities in business and politics",
+  "description": "my personal website, covering my activities in business and education",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
