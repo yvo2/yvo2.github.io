@@ -118,16 +118,21 @@ a {
     display: none;
 }
 
-#contact input, textarea {
+#contact input, textarea, button {
     padding: 5px;
     margin: 10px 0;
     border: 2px solid darkslategray;
     border-radius: 5px;
     width: 100%;
+    font-family: Raleway;
 }
 
 #contact textarea {
     resize: vertical;
+}
+
+#contact button {
+    width: 20%;
 }
 
 /* navigation bar */
