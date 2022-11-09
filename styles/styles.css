@@ -108,18 +108,10 @@ a {
     margin-bottom: 20px;
 }
 
-#politics {
+#contact {
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 50% 25%;
     grid-gap: 15px;
-}
-
-#politics img {
-    width: 100%;
-}
-
-#politics p {
-    margin-bottom: 20px;
 }
 
 /* navigation bar */
