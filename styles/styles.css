@@ -135,6 +135,10 @@ a {
     width: 20%;
 }
 
+p > a {
+    color: white;
+}
+
 /* navigation bar */
 
 ul.horizontal-nav {
