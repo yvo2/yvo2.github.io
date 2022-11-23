@@ -79,9 +79,9 @@ a {
 }
 
 #business {
-    width: 100%;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 25% 50% 25%;
+    width: 100vw;
+    grid-template-columns: 30% 50% 18%;
+    grid-template-rows: 40% 50% 10%;
     grid-gap: 15px;
     overflow: hidden;
 }
@@ -182,11 +182,11 @@ ul.horizontal-nav {
     display: inline-block;
 }
 
-#mobile {
+.mobile {
     display: none;
 }
 
-#toggle {
+.toggle {
     display: block;
     position: fixed;
     z-index: 1000;
@@ -194,7 +194,7 @@ ul.horizontal-nav {
     top: 5vh;
 }
 
-#toggle input {
+.toggle input {
     display: block;
     width: 40px;
     height: 32px;
@@ -205,7 +205,7 @@ ul.horizontal-nav {
     -webkit-touch-callout: none;
 }
 
-#toggle span {
+.toggle span {
     display: block;
     width: 33px;
     height: 4px;
@@ -220,30 +220,30 @@ ul.horizontal-nav {
     opacity 0.55s ease;
 }
 
-#toggle span:first-child {
+.toggle span:first-child {
     transform-origin: 0 0;
 }
 
-#toggle span:nth-last-child(2) {
+.toggle span:nth-last-child(2) {
     transform-origin: 0 100%;
 }
 
-#toggle input:checked ~ span {
+.toggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: white;
 }
 
-#toggle input:checked ~ span:nth-last-child(3) {
+.toggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#toggle input:checked ~ span:nth-last-child(2) {
+.toggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-#toggle input:checked ~ ul {
+.toggle input:checked ~ ul {
     transform: none;
 }
 
@@ -406,11 +406,11 @@ section p {
     opacity: .5;
 }
 
-#scroll a {
+.scroll a {
     padding-top: 60px;
 }
 
-#scroll a span {
+.scroll a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -452,13 +452,13 @@ section p {
 
 /* CV */
 
-#cv {
+.cv {
     min-width: 300px;
     max-width: 500px;
     margin: auto;
 }
 
-#cv > p {
+.cv > p {
     font-size: 1em;
     line-height: 1.75em;
     border-top: 3px solid;
@@ -471,7 +471,7 @@ section p {
     position: relative;
 }
 
-#cv > p::before {
+.cv > p::before {
     content: counter(section);
     position: absolute;
     border-radius: 50%;
@@ -484,35 +484,35 @@ section p {
     font-size: 1em;
 }
 
-#cv > p:nth-child(odd) {
+.cv > p:nth-child(odd) {
     border-right: 3px solid;
     padding-left: 0;
 }
 
-#cv > p::before {
+.cv > p::before {
     left: 100%;
     margin-left: -20px;
 
 }
 
-#cv > p:nth-child(even) {
+.cv > p:nth-child(even) {
     border-left: 3px solid;
     padding-right: 0;
 }
 
-#cv > p::before {
+.cv > p::before {
     right: 100%;
     margin-right: -20px;
 
 }
 
-#cv > p:first-child {
+.cv > p:first-child {
     border-top: 0;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
 
-#cv > p:last-child {
+.cv > p:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
