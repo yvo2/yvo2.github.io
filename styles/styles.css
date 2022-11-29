@@ -74,20 +74,22 @@ a {
     display: grid;
 }
 
+.center-img {
+    width: 100%;
+    align-self: center;
+    flex: 0 0 auto;
+}
+
 .details {
     width: 100%;
 }
 
 #business {
     width: 100vw;
-    grid-template-columns: 30% 50% 18%;
+    grid-template-columns: 25% 50% calc(25% - 5vw);
     grid-template-rows: 40% 50% 10%;
-    grid-gap: 15px;
+    grid-column-gap: 2.5vw;
     overflow: hidden;
-}
-
-#business img {
-    width: 100%;
 }
 
 #business p {
@@ -98,10 +100,6 @@ a {
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 25% 50% 25%;
     grid-gap: 15px;
-}
-
-#education img {
-    width: 100%;
 }
 
 #education p {
@@ -137,6 +135,13 @@ a {
 
 p > a {
     color: white;
+}
+
+@media screen and (max-width: 992px) {
+    #business, #education, #contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* navigation bar */
@@ -182,11 +187,7 @@ ul.horizontal-nav {
     display: inline-block;
 }
 
-.mobile {
-    display: none;
-}
-
-.toggle {
+#toggle {
     display: block;
     position: fixed;
     z-index: 1000;
@@ -194,7 +195,7 @@ ul.horizontal-nav {
     top: 5vh;
 }
 
-.toggle input {
+#toggle input {
     display: block;
     width: 40px;
     height: 32px;
@@ -205,8 +206,7 @@ ul.horizontal-nav {
     -webkit-touch-callout: none;
 }
 
-.toggle span {
-    display: block;
+#toggle span {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
@@ -220,30 +220,30 @@ ul.horizontal-nav {
     opacity 0.55s ease;
 }
 
-.toggle span:first-child {
+#toggle span:first-child {
     transform-origin: 0 0;
 }
 
-.toggle span:nth-last-child(2) {
+#toggle span:nth-last-child(2) {
     transform-origin: 0 100%;
 }
 
-.toggle input:checked ~ span {
+#toggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: white;
 }
 
-.toggle input:checked ~ span:nth-last-child(3) {
+#toggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.toggle input:checked ~ span:nth-last-child(2) {
+#toggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-.toggle input:checked ~ ul {
+#toggle input:checked ~ ul {
     transform: none;
 }
 
@@ -267,7 +267,7 @@ ul.horizontal-nav {
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 
-    #mobile {
+    #toggle span {
         display: block;
     }
 }
