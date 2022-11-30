@@ -1,0 +1,194 @@
+/* project-wide fonts */
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+/* direct, self-written classes */
+body {
+    line-height: 1.3;
+    padding-bottom: 0;
+    scroll-behavior: smooth;
+    font-family: Lato;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+@media screen and (max-width: 992px) {
+    * {
+        cursor: auto;
+    }
+}
+
+a {
+    color: black;
+}
+
+#intro {
+    background: url("../img/night.jpeg") no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .75);
+}
+
+@media screen and (max-width: 992px) {
+    #intro {
+        background-position: center;
+    }
+}
+
+#random {
+    font-size: 2vh;
+    position: absolute;
+    top: 4vh;
+    right: 5vh;
+}
+
+@media screen and (max-width: 992px) {
+    #random {
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #random {
+        font-size: 4vh;
+    }
+}
+
+#business, #education, #contact {
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 5vh 0;
+    box-sizing: border-box;
+    background: rgb(24, 63, 60);
+    display: grid;
+}
+
+.center-img {
+    width: 100%;
+    align-self: center;
+    flex: 0 0 auto;
+}
+
+.details {
+    width: 100%;
+}
+
+#business {
+    width: 100vw;
+    grid-template-columns: 25% 50% calc(25% - 5vw);
+    grid-template-rows: 40% 50% 10%;
+    grid-column-gap: 2.5vw;
+    overflow: hidden;
+}
+
+#business p {
+    margin-bottom: 20px;
+}
+
+#education {
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-gap: 15px;
+}
+
+#education p {
+    margin-bottom: 20px;
+}
+
+#contact {
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-gap: 15px;
+}
+
+#contact input[type=checkbox] {
+    display: none;
+}
+
+#contact input, textarea, button {
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    width: 100%;
+    font-family: Raleway;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    width: 20%;
+}
+
+p > a {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    #business, #education, #contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* colorful blob design element */
+
+svg {
+    width: 15em;
+    height: 15em;
+}
+
+/* special cursor */
+
+@media screen and (min-width: 992px) {
+    .cursor {
+        visibility: hidden;
+        position: absolute;
+        margin-top: calc(10px / -2);
+        margin-left: calc(10px / -2);
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+
+        /* would still like to be able to click things */
+        pointer-events: none;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .pulse {
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
+        animation: pulse 1.2s 1;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+    }
+}
