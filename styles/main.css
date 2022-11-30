@@ -72,12 +72,11 @@ a {
     box-sizing: border-box;
     background: rgb(24, 63, 60);
     display: grid;
+    overflow: hidden;
 }
 
 .center-img {
     width: 100%;
-    align-self: center;
-    flex: 0 0 auto;
 }
 
 .details {
@@ -89,7 +88,6 @@ a {
     grid-template-columns: 25% 50% calc(25% - 5vw);
     grid-template-rows: 40% 50% 10%;
     grid-column-gap: 2.5vw;
-    overflow: hidden;
 }
 
 #business p {
@@ -141,6 +139,12 @@ p > a {
     #business, #education, #contact {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .center-img {
+        width: 100%;
+        align-self: center;
+        flex: 0 0 auto;
     }
 }
 
