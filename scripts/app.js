@@ -149,7 +149,7 @@ $(function () {
 
 async function load_pic() {
 
-    const url = 'https://ranmoji.herokuapp.com/emojis/api/v.1.0/'
+    const url = 'https://emojihub.yurace.pro/api/random'
 
     const options = {
         method: "GET"
@@ -170,3 +170,15 @@ async function load_pic() {
 }
 
 load_pic();
+
+// leaflet integration
+
+var layer = L.map('map').setView([46.92896, 7.5636], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(layer);
+
+L.marker([46.92896, 7.5636]).addTo(layer)
+    .bindPopup('Antreffbar während typisch-<br> gängigen Büroöffnungszeiten.')
+    .openPopup();

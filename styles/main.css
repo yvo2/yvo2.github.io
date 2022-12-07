@@ -95,9 +95,9 @@ a {
 }
 
 #education {
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% 50% calc(25% - 5vw);
     grid-template-rows: 25% 50% 25%;
-    grid-gap: 15px;
+    grid-gap: 2.5vw;
 }
 
 #education p {
@@ -105,9 +105,9 @@ a {
 }
 
 #contact {
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 25% 50% 25%;
-    grid-gap: 15px;
+    grid-template-columns: 10% calc(90% - 5vw);
+    grid-template-rows: 30% 70%;
+    grid-gap: 2.5vw;
 }
 
 #contact input[type=checkbox] {
@@ -149,14 +149,12 @@ p > a {
 }
 
 /* colorful blob design element */
-
 svg {
     width: 15em;
     height: 15em;
 }
 
 /* special cursor */
-
 @media screen and (min-width: 992px) {
     .cursor {
         visibility: hidden;
@@ -167,7 +165,6 @@ svg {
         height: 10px;
         z-index: 1;
 
-        /* would still like to be able to click things */
         pointer-events: none;
     }
 
@@ -195,4 +192,9 @@ svg {
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
         }
     }
+}
+
+/* leaflet */
+#map {
+    height: 50vh;
 }
