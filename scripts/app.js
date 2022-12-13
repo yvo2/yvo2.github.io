@@ -173,12 +173,17 @@ load_pic();
 
 // leaflet integration
 
-var layer = L.map('map').setView([46.92896, 7.5636], 13);
+var layer = L.map('map', {crs: L.CRS.EPSG2056});
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(layer);
+// Add Swiss layer with default options
+L.tileLayer.swiss().addTo(layer);
 
-L.marker([46.92896, 7.5636]).addTo(layer)
-    .bindPopup('Antreffbar während typisch-<br> gängigen Büroöffnungszeiten.')
+// Center the map on Switzerland
+layer.fitSwitzerland();
+
+// Add a marker with a popup in Bern
+L.marker(L.CRS.EPSG2056.unproject(L.point(2609510, 1197553))).addTo(layer)
+    .bindPopup('Swisscom AG, Worb')
     .openPopup();
+
+layer.setView(L.CRS.EPSG2056.unproject(L.point(2609510, 1197553)), 20);
