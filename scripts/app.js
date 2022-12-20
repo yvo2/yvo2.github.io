@@ -171,17 +171,11 @@ async function load_pic() {
 
 load_pic();
 
-// leaflet integration
-
 var layer = L.map('map', {crs: L.CRS.EPSG2056});
 
-// Add Swiss layer with default options
 L.tileLayer.swiss().addTo(layer);
-
-// Center the map on Switzerland
 layer.fitSwitzerland();
 
-// Add a marker with a popup in Bern
 L.marker(L.CRS.EPSG2056.unproject(L.point(2609510, 1197553))).addTo(layer)
     .bindPopup('Swisscom AG, Worb')
     .openPopup();
