@@ -56,8 +56,18 @@ a {
     overflow: hidden;
 }
 
-.center-img {
+.cv-img {
     width: 100%;
+}
+
+.reduce-img {
+    width: 80%;
+}
+
+.center-img {
+    width: calc(100% - 10em);
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 .details {
@@ -66,7 +76,7 @@ a {
 
 #business {
     grid-template-columns: 25% 50% calc(25% - 5vw);
-    grid-template-rows: 40% 50% 10%;
+    grid-template-rows: 40% 40% 10%;
     grid-column-gap: 2.5vw;
 }
 
@@ -82,10 +92,6 @@ a {
 
 #education p {
     margin-bottom: 20px;
-}
-
-.right-img {
-    width: 80%;
 }
 
 #contact {
@@ -135,9 +141,15 @@ p > a {
         flex-wrap: wrap;
     }
 
-    .center-img {
+    .cv-img {
         width: 100%;
         align-self: center;
         flex: 0 0 auto;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .void {
+        display: none;
     }
 }
