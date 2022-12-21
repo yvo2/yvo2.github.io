@@ -1,8 +1,8 @@
 # yvo2.github.io / yvohofer.ch
-welcome to my personal website project, covering my activities in business and studies
+welcome to my personal website project, covering my activities in business and studies.
 
 ## sources used
-I have used and adapted these different sources, from direct affiliation to knowledge copy
+I have used and adapted these different sources, from direct affiliation to knowledge copy:
 
 - [decorative blob](https://georgefrancis.dev/writing/build-a-smooth-animated-blob-with-svg-and-js/)
 - [scroll down button](https://codepen.io/nxworld/pen/OyRrGy)
