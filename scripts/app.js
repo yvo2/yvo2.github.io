@@ -149,10 +149,10 @@ $(function () {
 
 async function load_pic() {
 
-    const url = 'https://emojihub.yurace.pro/api/random'
+    const url = 'https://cors-anywhere.herokuapp.com/https://emojihub.yurace.pro/api/random'
 
     const options = {
-        method: "GET"
+        method: 'GET'
     }
 
     let response = await fetch(url, options)
@@ -160,12 +160,12 @@ async function load_pic() {
     if (response.status === 200) {
 
         const result = await response.json();
-        const emoji = result.emoji;
+        const emoji = result.htmlCode;
 
         const container = document.getElementById("random");
         container.innerHTML = emoji;
     } else {
-        console.log("HTTP-Error: " + response.status)
+        console.log('HTTP-Error: ' + response.status)
     }
 }
 
