@@ -46,25 +46,6 @@ a {
     }
 }
 
-#random {
-    font-size: 2vh;
-    position: absolute;
-    top: 4vh;
-    right: 5vh;
-}
-
-@media screen and (max-width: 992px) {
-    #random {
-        font-size: 3vh;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #random {
-        font-size: 4vh;
-    }
-}
-
 #business, #education, #contact {
     width: 100%;
     height: 100vh;
@@ -154,86 +135,5 @@ p > a {
         width: 100%;
         align-self: center;
         flex: 0 0 auto;
-    }
-}
-
-/* colorful blob design element */
-svg {
-    width: 15em;
-    height: 15em;
-}
-
-/* special cursor */
-@media screen and (min-width: 1180px) {
-    .cursor {
-        position: absolute;
-        margin-top: calc(10px / -2);
-        margin-left: calc(10px / -2);
-        width: 10px;
-        height: 10px;
-        z-index: 1;
-
-        pointer-events: none;
-    }
-
-    .circle {
-        width: 10px;
-        height: 10px;
-        background-color: white;
-        border-radius: 50%;
-    }
-
-    .pulse {
-        border-radius: 50%;
-        box-shadow: 0 0 0 rgba(255, 255, 255, 0.5);
-        animation: pulse 1.2s 1;
-    }
-
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-        }
-        70% {
-            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-        }
-        100% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-        }
-    }
-}
-
-/* leaflet */
-#map {
-    height: 80%;
-    width: 100%;
-}
-
-@media screen and (max-width: 992px) {
-    #map {
-        height: 45%;
-    }
-
-    .location {
-        margin-top: 10%;
-    }
-}
-
-@media screen and (max-width: 992px) and (max-height: 900px) {
-    #map {
-        height: 35%;
-    }
-
-    .location {
-        margin-top: 30%;
-    }
-}
-
-@media screen and (max-width: 992px) and (max-height: 700px) {
-    #map {
-        height: 25%;
-    }
-
-    .location {
-        margin-top: 40%;
     }
 }

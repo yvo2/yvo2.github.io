@@ -1,11 +1,4 @@
 /* CV */
-
-.cv {
-    min-width: 300px;
-    max-width: 500px;
-    margin: auto;
-}
-
 .cv > p {
     font-size: 1em;
     line-height: 1.75em;
