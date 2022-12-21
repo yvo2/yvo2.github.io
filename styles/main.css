@@ -24,7 +24,7 @@ body {
     cursor: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1180px) {
     * {
         cursor: auto;
     }
@@ -115,11 +115,12 @@ a {
 
 #contact input, textarea, button {
     padding: 5px;
-    margin: 10px 0;
+    margin: 5px 0;
     border: 2px solid darkslategray;
     border-radius: 5px;
     width: 100%;
     font-family: Raleway;
+    color: darkslategray;
     font-size: 1em;
 }
 
@@ -127,8 +128,16 @@ a {
     resize: vertical;
 }
 
+@media screen and (max-width: 1180px) {
+    #contact form {
+        height: 20%;
+    }
+}
+
 #contact button {
-    width: 20%;
+    background-color: white;
+    width: auto;
+    color: rgba(47, 79, 79, 0.7);
 }
 
 p > a {
@@ -155,7 +164,7 @@ svg {
 }
 
 /* special cursor */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1180px) {
     .cursor {
         position: absolute;
         margin-top: calc(10px / -2);
@@ -195,6 +204,36 @@ svg {
 
 /* leaflet */
 #map {
-    height: 50vh;
+    height: 80%;
     width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    #map {
+        height: 45%;
+    }
+
+    .location {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 992px) and (max-height: 900px) {
+    #map {
+        height: 35%;
+    }
+
+    .location {
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 992px) and (max-height: 700px) {
+    #map {
+        height: 25%;
+    }
+
+    .location {
+        margin-top: 40%;
+    }
 }

@@ -177,7 +177,7 @@ L.tileLayer.swiss().addTo(layer);
 layer.fitSwitzerland();
 
 L.marker(L.CRS.EPSG2056.unproject(L.point(2609510, 1197553))).addTo(layer)
-    .bindPopup('Swisscom AG, Worb')
+    .bindPopup('Swisscom (Schweiz) AG, Worb')
     .openPopup();
 
 layer.setView(L.CRS.EPSG2056.unproject(L.point(2609510, 1197553)), 20);
