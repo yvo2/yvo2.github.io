@@ -75,13 +75,17 @@ a {
 }
 
 #education {
-    grid-template-columns: 25% 50% calc(25% - 5vw);
-    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 25% calc(75% - 5vw);
+    grid-template-rows: 40% 40% 10%;
     grid-gap: 2.5vw;
 }
 
 #education p {
     margin-bottom: 20px;
+}
+
+.right-img {
+    width: 80%;
 }
 
 #contact {
